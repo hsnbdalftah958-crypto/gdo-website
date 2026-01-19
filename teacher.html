@@ -1,0 +1,9 @@
+
+<h1>لوحة المعلم</h1>
+{% for s in students %}
+<p>{{s[1]}} - {{s[2]}} - نقاط: {{s[4]}}
+<a href='/attendance/{{s[2]}}/present'>حاضر</a>
+<a href='/attendance/{{s[2]}}/late'>متأخر</a>
+<a href='/attendance/{{s[2]}}/absent'>غائب</a>
+<a href='/qr/{{s[2]}}'>QR</a></p>
+{% endfor %}
